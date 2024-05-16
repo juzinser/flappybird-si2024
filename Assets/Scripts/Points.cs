@@ -3,6 +3,8 @@ using UnityEngine;
 public class Points : MonoBehaviour
 {
     public GameManager gameManager;
+    public AudioSource src;
+    public AudioClip sfx3;
 
     private void Start()
     {
@@ -13,5 +15,7 @@ public class Points : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         gameManager.Score++;
+        src.clip = sfx3;
+        src.Play();
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public GameObject gameOverView;
+    public GameObject gameStartView;
     public Text scoreView;
     
     private int _score;
@@ -19,9 +20,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
+   /* private void Init()
+    {
+        
+    }*/
+
+    private void StartGame()
+    {
+        gameStartView.SetActive(false);
+        Time.timeScale = 1;
+    }
+
     private void Start()
     {
-        Time.timeScale = 1;
+        gameStartView.SetActive(true);
+        Time.timeScale = 0;
     }
 
     public void RestartGame()
