@@ -5,7 +5,7 @@ public class SpawnObjects : MonoBehaviour
     public GameObject prefab;
     public float maxHeight;
     public float minHeight;
-    public float maxTime = .5f;
+    public float maxTime = 1.5f;
 
     private float _timer;
 
